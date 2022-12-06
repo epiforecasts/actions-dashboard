@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>epiforecasts Action Dashboard</title>
+
+<script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="index_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="index_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="index_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="index_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="index_files/navigation-1.1/tabsets.js"></script>
+<link href="index_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="index_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">epiforecasts Action Dashboard</h1>
+
+</div>
+
+
+<div id="epinow2" class="section level2">
+<h2><a href="https://github.com/epiforecasts/EpiNow2">EpiNow2</a></h2>
+<p><a href="https://github.com/epiforecasts/EpiNow2/blob/main/.github/workflows/check-full.yaml"><img src="https://github.com/epiforecasts/EpiNow2/workflows/R-CMD-check/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/EpiNow2/blob/main/.github/workflows/test-coverage.yaml"><img src="https://github.com/epiforecasts/EpiNow2/workflows/test-coverage/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/EpiNow2/blob/main/.github/workflows/pr-commands.yaml"><img src="https://github.com/epiforecasts/EpiNow2/workflows/Commands/badge.svg" /></a></p>
+</div>
+<div id="epinow" class="section level2">
+<h2><a href="https://github.com/epiforecasts/EpiNow">EpiNow</a></h2>
+<p><a href="https://github.com/epiforecasts/EpiNow/blob/master/.github/workflows/check-full.yaml"><img src="https://github.com/epiforecasts/EpiNow/workflows/R-CMD-check/badge.svg" /></a></p>
+</div>
+<div id="episoon" class="section level2">
+<h2><a href="https://github.com/epiforecasts/EpiSoon">EpiSoon</a></h2>
+<p><a href="https://github.com/epiforecasts/EpiSoon/blob/master/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/EpiSoon/workflows/pkgdown/badge.svg" /></a></p>
+</div>
+<div id="rtd3" class="section level2">
+<h2><a href="https://github.com/epiforecasts/RtD3">RtD3</a></h2>
+<p><a href="https://github.com/epiforecasts/RtD3/blob/master/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/RtD3/workflows/pkgdown/badge.svg" /></a></p>
+</div>
+<div id="actions-dashboard" class="section level2">
+<h2><a href="https://github.com/epiforecasts/actions-dashboard">actions-dashboard</a></h2>
+<p><a href="https://github.com/epiforecasts/actions-dashboard/blob/main/.github/workflows/deploy.yaml"><img src="https://github.com/epiforecasts/actions-dashboard/workflows/deploy/badge.svg" /></a></p>
+</div>
+<div id="baseline.models" class="section level2">
+<h2><a href="https://github.com/epiforecasts/baseline.models">baseline.models</a></h2>
+<p><a href="https://github.com/epiforecasts/baseline.models/blob/main/.github/workflows/R-CMD-check.yaml"><img src="https://github.com/epiforecasts/baseline.models/workflows/R-CMD-check/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/baseline.models/blob/main/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/baseline.models/workflows/pkgdown/badge.svg" /></a></p>
+</div>
+<div id="covid-rt-estimates" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid-rt-estimates">covid-rt-estimates</a></h2>
+</div>
+<div id="covid-us-forecasts" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid-us-forecasts">covid-us-forecasts</a></h2>
+</div>
+<div id="covid.german.forecasts" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid.german.forecasts">covid.german.forecasts</a></h2>
+<p><a href="https://github.com/epiforecasts/covid.german.forecasts/blob/master/.github/workflows/docker-build.yaml"><img src="https://github.com/epiforecasts/covid.german.forecasts/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+</div>
+<div id="covid19-uk-nowcasts-projections" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid19-uk-nowcasts-projections">covid19-uk-nowcasts-projections</a></h2>
+<p><a href="https://github.com/epiforecasts/covid19-uk-nowcasts-projections/blob/main/.github/workflows/build-and-push-image.yaml"><img src="https://github.com/epiforecasts/covid19-uk-nowcasts-projections/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+</div>
+<div id="covid19.lfd.england" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid19.lfd.england">covid19.lfd.england</a></h2>
+</div>
+<div id="covid19.nhs.data" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid19.nhs.data">covid19.nhs.data</a></h2>
+<p><a href="https://github.com/epiforecasts/covid19.nhs.data/blob/main/.github/workflows/R-CMD-check.yaml"><img src="https://github.com/epiforecasts/covid19.nhs.data/workflows/R-CMD-check/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covid19.nhs.data/blob/main/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/covid19.nhs.data/workflows/pkgdown/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covid19.nhs.data/blob/main/.github/workflows/test-coverage.yaml"><img src="https://github.com/epiforecasts/covid19.nhs.data/workflows/test-coverage/badge.svg" /></a></p>
+</div>
+<div id="covid19.track.severity" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid19.track.severity">covid19.track.severity</a></h2>
+<p><a href="https://github.com/epiforecasts/covid19.track.severity/blob/main/.github/workflows/R-CMD-check.yaml"><img src="https://github.com/epiforecasts/covid19.track.severity/workflows/R-CMD-check/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covid19.track.severity/blob/main/.github/workflows/test-coverage.yaml"><img src="https://github.com/epiforecasts/covid19.track.severity/workflows/test-coverage/badge.svg" /></a></p>
+</div>
+<div id="covid19_uk_local" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid19_uk_local">covid19_uk_local</a></h2>
+</div>
+<div id="covid" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covid">covid</a></h2>
+</div>
+<div id="covidregionaldata" class="section level2">
+<h2><a href="https://github.com/epiforecasts/covidregionaldata">covidregionaldata</a></h2>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/pkgdown/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/test-coverage.yaml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/test-coverage/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/greetings.yml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/Greetings/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/pr-checklist.yaml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/.github/workflows/pr-checklist.yaml/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/draft-pdf.yml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/.github/workflows/draft-pdf.yml/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/source_actions_exist.yaml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/Workflow_source_exists/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/build-image.yaml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/R-CMD-check.yaml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/R-CMD-check/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/lint.yaml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/lint/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/covidregionaldata/blob/master/.github/workflows/test-regional-datasets.yml"><img src="https://github.com/epiforecasts/covidregionaldata/workflows/Test%20Regional%20Datasets/badge.svg" /></a></p>
+</div>
+<div id="epiforecasts.github.io" class="section level2">
+<h2><a href="https://github.com/epiforecasts/epiforecasts.github.io">epiforecasts.github.io</a></h2>
+<p><a href="https://github.com/epiforecasts/epiforecasts.github.io/blob/main/.github/workflows/build-and-deploy.yaml"><img src="https://github.com/epiforecasts/epiforecasts.github.io/workflows/build-and-deploy/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/epiforecasts.github.io/blob/main/.github/workflows/update-publications.yaml"><img src="https://github.com/epiforecasts/epiforecasts.github.io/workflows/Update%20publications/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/epiforecasts.github.io/blob/main/.github/workflows/validate-team-member-id.yaml"><img src="https://github.com/epiforecasts/epiforecasts.github.io/workflows/Validate%20team%20member%20ID%20card/badge.svg" /></a></p>
+</div>
+<div id="europe-covid-forecast" class="section level2">
+<h2><a href="https://github.com/epiforecasts/europe-covid-forecast">europe-covid-forecast</a></h2>
+<p><a href="https://github.com/epiforecasts/europe-covid-forecast/blob/master/.github/workflows/docker-build.yaml"><img src="https://github.com/epiforecasts/europe-covid-forecast/workflows/Publish%20Docker%20image/badge.svg" /></a></p>
+</div>
+<div id="eval-germany-sp-nowcasting" class="section level2">
+<h2><a href="https://github.com/epiforecasts/eval-germany-sp-nowcasting">eval-germany-sp-nowcasting</a></h2>
+<p><a href="https://github.com/epiforecasts/eval-germany-sp-nowcasting/blob/main/.github/workflows/build-and-push-image.yaml"><img src="https://github.com/epiforecasts/eval-germany-sp-nowcasting/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+</div>
+<div id="evaluate-delta-for-forecasting" class="section level2">
+<h2><a href="https://github.com/epiforecasts/evaluate-delta-for-forecasting">evaluate-delta-for-forecasting</a></h2>
+<p><a href="https://github.com/epiforecasts/evaluate-delta-for-forecasting/blob/main/.github/workflows/paper.yaml"><img src="https://github.com/epiforecasts/evaluate-delta-for-forecasting/workflows/paper/badge.svg" /></a></p>
+</div>
+<div id="forecast.vocs" class="section level2">
+<h2><a href="https://github.com/epiforecasts/forecast.vocs">forecast.vocs</a></h2>
+<p><a href="https://github.com/epiforecasts/forecast.vocs/blob/main/.github/workflows/lint.yaml"><img src="https://github.com/epiforecasts/forecast.vocs/workflows/lint/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/forecast.vocs/blob/main/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/forecast.vocs/workflows/pkgdown/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/forecast.vocs/blob/main/.github/workflows/test-coverage.yaml"><img src="https://github.com/epiforecasts/forecast.vocs/workflows/test-coverage/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/forecast.vocs/blob/main/.github/workflows/build-and-push-image.yaml"><img src="https://github.com/epiforecasts/forecast.vocs/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+</div>
+<div id="idbrms" class="section level2">
+<h2><a href="https://github.com/epiforecasts/idbrms">idbrms</a></h2>
+</div>
+<div id="inc2prev" class="section level2">
+<h2><a href="https://github.com/epiforecasts/inc2prev">inc2prev</a></h2>
+<p><a href="https://github.com/epiforecasts/inc2prev/blob/master/.github/workflows/build-and-push-image.yaml"><img src="https://github.com/epiforecasts/inc2prev/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+</div>
+<div id="monkeypox_heavytail" class="section level2">
+<h2><a href="https://github.com/epiforecasts/monkeypox_heavytail">monkeypox_heavytail</a></h2>
+<p><a href="https://github.com/epiforecasts/monkeypox_heavytail/blob/main/.github/workflows/deploy.yaml"><img src="https://github.com/epiforecasts/monkeypox_heavytail/workflows/deploy/badge.svg" /></a></p>
+</div>
+<div id="omicron-sgtf-forecast" class="section level2">
+<h2><a href="https://github.com/epiforecasts/omicron-sgtf-forecast">omicron-sgtf-forecast</a></h2>
+<p><a href="https://github.com/epiforecasts/omicron-sgtf-forecast/blob/main/.github/workflows/build-and-publish-documentation.yaml"><img src="https://github.com/epiforecasts/omicron-sgtf-forecast/workflows/render-documentation/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/omicron-sgtf-forecast/blob/main/.github/workflows/build-and-push-image.yaml"><img src="https://github.com/epiforecasts/omicron-sgtf-forecast/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+</div>
+<div id="rt.validation" class="section level2">
+<h2><a href="https://github.com/epiforecasts/rt.validation">rt.validation</a></h2>
+<p><a href="https://github.com/epiforecasts/rt.validation/blob/main/.github/workflows/R-CMD-check.yaml"><img src="https://github.com/epiforecasts/rt.validation/workflows/R-CMD-check/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/rt.validation/blob/main/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/rt.validation/workflows/pkgdown/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/rt.validation/blob/main/.github/workflows/pr-commands.yaml"><img src="https://github.com/epiforecasts/rt.validation/workflows/Commands/badge.svg" /></a></p>
+</div>
+<div id="scoringutils" class="section level2">
+<h2><a href="https://github.com/epiforecasts/scoringutils">scoringutils</a></h2>
+<p><a href="https://github.com/epiforecasts/scoringutils/blob/master/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/scoringutils/workflows/pkgdown/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/scoringutils/blob/master/.github/workflows/test-coverage.yaml"><img src="https://github.com/epiforecasts/scoringutils/workflows/test-coverage/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/scoringutils/blob/master/.github/workflows/build-image.yaml"><img src="https://github.com/epiforecasts/scoringutils/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/scoringutils/blob/master/.github/workflows/lint.yaml"><img src="https://github.com/epiforecasts/scoringutils/workflows/lint/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/scoringutils/blob/master/.github/workflows/R-CMD-check.yaml"><img src="https://github.com/epiforecasts/scoringutils/workflows/R-CMD-check/badge.svg" /></a></p>
+</div>
+<div id="simplified-forecaster-evaluation" class="section level2">
+<h2><a href="https://github.com/epiforecasts/simplified-forecaster-evaluation">simplified-forecaster-evaluation</a></h2>
+<p><a href="https://github.com/epiforecasts/simplified-forecaster-evaluation/blob/main/.github/workflows/build-and-publish-paper.yaml"><img src="https://github.com/epiforecasts/simplified-forecaster-evaluation/workflows/render-paper/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/simplified-forecaster-evaluation/blob/main/.github/workflows/build-and-push-image.yaml"><img src="https://github.com/epiforecasts/simplified-forecaster-evaluation/workflows/Create%20and%20publish%20a%20Docker%20image/badge.svg" /></a></p>
+</div>
+<div id="slack_bot" class="section level2">
+<h2><a href="https://github.com/epiforecasts/slack_bot">slack_bot</a></h2>
+<p><a href="https://github.com/epiforecasts/slack_bot/blob/main/.github/workflows/R-CMD-check.yaml"><img src="https://github.com/epiforecasts/slack_bot/workflows/R-CMD-check/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/slack_bot/blob/main/.github/workflows/announce_coffee.yml"><img src="https://github.com/epiforecasts/slack_bot/workflows/Weekly%20coffee%20announcement/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/slack_bot/blob/main/.github/workflows/announce_meeting.yml"><img src="https://github.com/epiforecasts/slack_bot/workflows/Lab%20meeting%20announcement/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/slack_bot/blob/main/.github/workflows/remind_meeting.yml"><img src="https://github.com/epiforecasts/slack_bot/workflows/Lab%20meeting%20reminder/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/slack_bot/blob/main/.github/workflows/render-readme.yaml"><img src="https://github.com/epiforecasts/slack_bot/workflows/Render%20README/badge.svg" /></a></p>
+</div>
+<div id="socialmixr" class="section level2">
+<h2><a href="https://github.com/epiforecasts/socialmixr">socialmixr</a></h2>
+<p><a href="https://github.com/epiforecasts/socialmixr/blob/main/.github/workflows/R-CMD-check.yaml"><img src="https://github.com/epiforecasts/socialmixr/workflows/R-CMD-check/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/socialmixr/blob/main/.github/workflows/document.yaml"><img src="https://github.com/epiforecasts/socialmixr/workflows/Document/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/socialmixr/blob/main/.github/workflows/lint-changed-files.yaml"><img src="https://github.com/epiforecasts/socialmixr/workflows/lint-changed-files/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/socialmixr/blob/main/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/socialmixr/workflows/pkgdown/badge.svg" /></a></p>
+<p><a href="https://github.com/epiforecasts/socialmixr/blob/main/.github/workflows/test-coverage.yaml"><img src="https://github.com/epiforecasts/socialmixr/workflows/test-coverage/badge.svg" /></a></p>
+</div>
+<div id="stackr" class="section level2">
+<h2><a href="https://github.com/epiforecasts/stackr">stackr</a></h2>
+<p><a href="https://github.com/epiforecasts/stackr/blob/master/.github/workflows/pkgdown.yaml"><img src="https://github.com/epiforecasts/stackr/workflows/pkgdown/badge.svg" /></a></p>
+</div>
+<div id="universe" class="section level2">
+<h2><a href="https://github.com/epiforecasts/universe">universe</a></h2>
+<p><a href="https://github.com/epiforecasts/universe/blob/main/.github/workflows/validate-json.yaml"><img src="https://github.com/epiforecasts/universe/workflows/Validate%20JSONs/badge.svg" /></a></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
